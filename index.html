@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>میز ارز | بازار لحظه‌ای ارز و کریپتو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-dots"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-scan"></div>
+  </div>
+
+  <div class="ticker-wrap"><div class="ticker-track" id="tickerTrack"></div></div>
+
+  <div class="header-wrap">
+  <header>
+    <div class="brand">
+      <div class="brand-mark">﷼</div>
+      <div class="brand-text">
+        <h1>میز ارز</h1>
+        <span>بازار لحظه‌ای ارز و ارز دیجیتال</span>
+      </div>
+    </div>
+    <div class="header-tools">
+      <div class="search-box">
+        <span style="opacity:.6">🔎</span>
+        <input id="searchInput" type="text" placeholder="جست‌وجوی دلار، بیت‌کوین...">
+      </div>
+      <div class="clock-box">
+        <div class="t num" id="clockTime">--:--:--</div>
+        <div class="d" id="clockDate">در حال بارگذاری</div>
+      </div>
+      <button class="icon-btn" id="themeToggle" title="تغییر حالت شب/روز">🌙</button>
+    </div>
+  </header>
+  </div>
+
+  <main>
+    <!-- HERO CONVERTER -->
+    <section class="hero">
+      <div class="hero-head">
+        <h2><span class="dot"></span>مبدل لحظه‌ای ارز</h2>
+        <span class="sub" id="liveStatus">در حال اتصال به منابع قیمت...</span>
+      </div>
+
+      <div class="conv-grid">
+        <div class="conv-field">
+          <label>از</label>
+          <div class="conv-panel">
+            <input type="text" id="amountFrom" class="num" value="1" inputmode="decimal">
+            <div class="conv-select">
+              <select id="selectFrom"></select>
+            </div>
+          </div>
+        </div>
+
+        <button class="swap-btn" id="swapBtn" title="جابه‌جایی">⇄</button>
+
+        <div class="conv-field">
+          <label>به</label>
+          <div class="conv-panel">
+            <input type="text" id="amountTo" class="num" value="0" readonly>
+            <div class="conv-select">
+              <select id="selectTo"></select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rate-line">
+        <div id="rateText">در حال محاسبه نرخ...</div>
+        <div class="updated-tag"><span class="dotsm"></span><span id="lastTick">هم‌اکنون</span></div>
+      </div>
+    </section>
+
+    <!-- CRYPTO -->
+    <section class="block">
+      <div class="section-head">
+        <h3>ارزهای دیجیتال <span class="badge">CRYPTO</span></h3>
+        <span class="count" id="cryptoCount"></span>
+      </div>
+      <div class="grid" id="cryptoGrid"></div>
+    </section>
+
+    <!-- FOREX -->
+    <section class="block">
+      <div class="section-head">
+        <h3>ارزهای خارجی <span class="badge">FOREX</span></h3>
+        <span class="count" id="forexCount"></span>
+      </div>
+      <div class="grid" id="forexGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footNote">در حال اتصال به منابع قیمت...</span><br>
+    ساخته شده تفننی توسط دکتر فرهان گلی
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
